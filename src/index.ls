@@ -3,7 +3,7 @@ require! <[ livescript through ]>
 const options = {+bare, map: 'embedded'}
 
 const compile = (file, data) ->
-    compiled = ls.compile data, {filename: file} <<< options
+    compiled = livescript.compile data, {filename: file} <<< options
     compiled.code + '\n'
 
 const is-live = (file) -> /.*\.ls$/.test file
